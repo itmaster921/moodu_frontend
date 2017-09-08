@@ -1,0 +1,57 @@
+.user-profile {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    #profile-picture {
+        width: 10rem;
+        height: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 10rem;
+        max-height: 10rem;
+        border-radius: 5rem;
+    }
+    .location {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+    .name-holder {
+        width: 100%;
+        font-size: 1.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: 600;
+    }
+    .edit-profile-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 500;
+    }
+    .user-profile-background-picture {
+        position: absolute;
+        width: 100%;
+        max-height: 19rem;
+    }
+    .background-image-wrapper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        max-height: 19rem;
+    }
+    .background-picture {
+        height: 3.6rem;
+        display: block;
+    }
+    .columns {
+        display: flex;
+    }
+    .profile-picture-wrapper {
+        margin-right: 3rem;
+    }
+}

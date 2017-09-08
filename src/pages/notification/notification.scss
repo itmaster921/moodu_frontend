@@ -1,0 +1,17 @@
+page-notification {
+    .notification-list {
+        text-align: justify;
+        font-size: 5rem;
+        .username {
+            font-weight: bold;
+            float: left;
+            margin-right: 10px;
+            margin-top: -1px;
+        }
+        .message {
+            float:left;
+
+        }
+    }
+    
+}

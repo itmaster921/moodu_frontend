@@ -1,0 +1,22 @@
+page-artist-profile {
+    .artist-background-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    .artist-background-picture {
+        height: 25rem;
+        width: 100%;
+        overflow: hidden;
+    }
+    .artist-name {
+        position: absolute;
+        font-size: 5rem;
+        color: #FFFFFF;
+        left: 1rem;
+        bottom: 1rem;
+    }
+    .picture {
+        width: 100%;
+        object-fit: cover;
+    }
+}

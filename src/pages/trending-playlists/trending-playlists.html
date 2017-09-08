@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <logo></logo>
+        <ion-buttons end>
+            <button type="button" (click)="openCreatePlaylistPage()" ion-button icon-only>
+              <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <h2>
+        Trending Playlists
+    </h2>
+    <!--<ion-card>
+      <img src="assets/img/card-saopaolo.png"/>
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>-->
+    <h2>
+        Your Playlists
+    </h2>
+    <ion-list>
+        <ion-item (click)="openPlaySongsPage(playlist.songs)" *ngFor="let playlist of playlists">
+            <ion-icon class="active" name="radio-button-on" item-start></ion-icon>
+            {{playlist.title}}
+        </ion-item>
+    </ion-list>
+</ion-content>

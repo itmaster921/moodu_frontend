@@ -1,0 +1,12 @@
+<!--
+  Generated template for the SongList component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-list>
+    <span *ngFor="let profile of profiles">
+    <user-list-item (click)="clickedOnProfile(profile, $event)" [profile]="profile" [selected]="isSelected(profile)" [removable]="removable" (userRemove)="removeFired($event)"></user-list-item>
+  </span>
+</ion-list>

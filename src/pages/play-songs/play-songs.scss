@@ -1,0 +1,102 @@
+page-play-songs {
+    .album-artwork {
+        // display: flex;
+        // justify-content: center;
+        width: 66%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .current-song-title,
+    .current-song-artist {
+        display: flex;
+        justify-content: center;
+        margin-top: .2rem;
+    }
+    .current-song-title {
+        font-size: 1.5rem;
+    }
+    .current-song-artist {
+        font-size: 1.25rem;
+        color: #b1b2b5;
+        font-weight: 700;
+    }
+    .music-playback-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        margin-bottom: 8px;
+        button {
+            font-size: 2.5rem;
+            flex: 1;
+            height: 1.3em;
+            padding: 0 .2em;
+        }
+        .play,
+        .pause {
+            font-size: 4rem;
+        }
+    }
+    .song-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .song-info-wrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .song-title {
+        font-weight: strong;
+        font-size: 1.5rem;
+    }
+    .song-artist {
+        font-size: 1.2rem;
+        color: #aeaeaf;
+    }
+    .columns {
+        display: flex;
+        flex-direction: row;
+    }
+    .rows {
+        display: flex;
+        align-items: column;
+    }
+    .user-picture {
+        margin-right: 1.3rem;
+        min-width: 6rem;
+    }
+    .profile-picture {
+        border-radius: 3rem;
+    }
+    .artist-wrapper {
+        margin-top: -0.7rem;
+    }
+    .album-artwork-small {
+        float: left;
+        margin-right: 10px;
+    }
+    .current {
+        color: red;
+    }
+    .skip-backward {
+        background-image: url('../assets/img/backward.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center left;
+    }
+    .skip-forward {
+        background-image: url('../assets/img/forward.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
+    }
+    .play {
+        background-image: url('../assets/img/rounded-play-button.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: center;
+    }
+}

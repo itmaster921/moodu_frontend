@@ -1,0 +1,22 @@
+user-profile-follower-info {
+    .flex-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    .user-name {
+        font-size: 2.0rem;
+        font-weight: bold;
+    }
+    .user-location {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    .follower-count, .following-count { 
+        font-size: 2.0rem;
+    }
+    .following-label, .follower-label {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

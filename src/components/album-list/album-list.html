@@ -1,0 +1,13 @@
+<ion-list no-lines>
+    <ion-list-header class="album-header" *ngIf="albums">
+        {{header}}
+    </ion-list-header>
+    <ion-item *ngFor="let album of albums" (click)="openAlbumProfile(album)">
+        <ion-thumbnail item-start>
+            <img *ngIf="album.images && album.images[0]" src="{{album.images[0].url}}">
+            <div class="missing-album" *ngIf="!album.images || !album.images[0]"></div>
+        </ion-thumbnail>
+        <h2>{{album.name}}</h2>
+        <p><span *ngFor="let artist of album.artists; let last=last">{{artist.name}}{{last ? '' : ', '}}</span></p>
+    </ion-item>
+</ion-list>

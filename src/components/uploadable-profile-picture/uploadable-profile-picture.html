@@ -1,0 +1,8 @@
+<div *ngIf="!!profileUrl" class="profile-wrapper">
+    <img class="background-image" [src]="apiUrl + profileUrl" />
+    <button ion-button color="light" small *ngIf="showEdit" (click)="presentPhotoActionSheet()" class="edit-picture-button">Edit</button>
+</div>
+<div *ngIf="!profileUrl" class="profile-wrapper">
+    <img class="background-image" src="assets/img/empty_profile.png" />
+    <button ion-button color="light" small *ngIf="showEdit" (click)="presentPhotoActionSheet()" class="add-picture-button">Add Photo</button>
+</div>

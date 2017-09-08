@@ -1,0 +1,16 @@
+<ion-list no-lines>
+    <ion-list-header class="artist-header" *ngIf="artists">
+        {{header}}
+    </ion-list-header>
+    <button ion-item *ngFor="let artist of artists" (click)="openArtistProfile(artist)">
+
+    <ion-thumbnail class="avatar" item-start>
+      <img class="avatar-thumbnail" *ngIf="artist.images && artist.images.length > 0" src="{{getSmallImage(artist)}}">
+      <div class="missing-image" *ngIf="!artist.images || !artist.images[0]"></div>
+      
+    </ion-thumbnail>
+    <h2>{{artist.name}}</h2>
+  </button>
+
+
+</ion-list>

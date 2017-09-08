@@ -1,0 +1,9 @@
+<ion-item>
+    <ion-thumbnail item-start>
+        <img *ngIf="profile.profile_picture" [src]="profile.profile_picture">
+        <img *ngIf="!profile.profile_picture" src="assets/img/empty_profile.png">
+    </ion-thumbnail>
+    @{{profile.user.first_name}} {{profile.user.last_name}}
+    <ion-icon *ngIf="selected == true" name="checkmark" item-end></ion-icon>
+    <ion-icon *ngIf="removable == true" name="close" class="remove-button" (click)="onRemove" item-end></ion-icon>
+</ion-item>

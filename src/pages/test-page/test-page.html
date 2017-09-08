@@ -1,0 +1,6 @@
+<ion-content padding class="home">
+    <user-artist-song-search (onSearchArtistResults)="onSearchArtistResults($event)" (onSearchTrackResults)="onSearchTrackResults($event)" (onSearchUserResults)="onSearchUserResults($event)"></user-artist-song-search>
+    <user-list [profiles]="profiles"></user-list>
+    <artist-list *ngIf="artists && artists.length > 0" [artists]="artists" [header]="'Artists'"></artist-list>
+    <song-list *ngIf="tracks && tracks.length > 0" [songs]="tracks" [header]="'Songs'"></song-list>
+</ion-content>

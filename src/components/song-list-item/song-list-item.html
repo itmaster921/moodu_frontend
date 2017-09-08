@@ -1,0 +1,15 @@
+<ion-item class="compact-item" (click)="onClick(song)">
+    <ion-thumbnail item-start>
+        <img *ngIf="song.album" src="{{song.album.images[2].url}}">
+        <img *ngIf="song.album_artwork" src="{{song.album_artwork.url}}">
+    </ion-thumbnail>
+    <!--<div class="track-number">{{song.track_number}}</div>-->
+    <div class="track-info">
+        <h2>{{song.name}}</h2>
+        <p><span *ngFor="let artist of song.artists; let last=last">{{artist.name}}{{last ? '' : ', '}}</span></p>
+    </div>
+    <div class="icons">
+        <ion-icon *ngIf="selected == true" name="checkmark" item-end></ion-icon>
+        <ion-icon *ngIf="removable == true" name="close" class="remove-button" (click)="onRemove" item-end></ion-icon>
+    </div>
+</ion-item>

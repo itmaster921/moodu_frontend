@@ -1,0 +1,65 @@
+page-create {
+    .page-wrapper {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        .profile-picture-wrapper {
+            margin: 16px;
+            margin-bottom: 10px;
+        }
+        .profile-picture {
+            flex: 0 0 auto;
+        }
+        .create-options {
+            flex: 1;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            .create-option {
+                border-radius: 2px;
+                border-style: solid;
+                border-width: 0 0 1px 0;
+                border-color: #817F78;
+                background: #fff;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+                flex: 1;
+                left: 0;
+                right: 0;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                &.post-track-option {
+                    background-image: url('../assets/img/earbuds.png');
+                }
+                &.mood-option {
+                    background-image: url('../assets/img/emojis.jpg');
+                }
+                &.prescribe-option {
+                    background-image: url('../assets/img/multi-colored-pill-pile.jpg');
+                }
+                &.playlist-option {
+                    background-image: url('../assets/img/kiss.png');
+                }
+                &.send-clip-option {
+                    background-image: url('../assets/img/Wave-Length.jpg');
+                }
+                .card-title {
+                    font-size: 3rem;
+                    color: #FFF;
+                    font-weight: 800;
+                    width: 100%;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

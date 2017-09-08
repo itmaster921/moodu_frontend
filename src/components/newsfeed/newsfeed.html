@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Newsfeed component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div class="newsfeed">
+    <ion-list>
+        <ion-item *ngFor="let activity of activities">
+            <div class="columns">
+                <user-picture class="user-picture" [pictureUrl]="activity.profile.profile_picture"></user-picture>
+                <div class="right-column">
+                    <span>{{activity.actor.first_name}} sent the playlist "{{activity.object.title}}" {{activity.object.shared_with_users.length > 0 ? 'to' : ''}}</span>
+                    <span (click)="onUserItemClick(sharedUser.spotify_id)" *ngFor="let sharedUser of activity.object.shared_with_users">
+                    {{sharedUser.first_name}}  
+                    </span>
+                    <video *ngIf="activity.object.playlist_video" [src]="activity.object.playlist_video"></video>
+                    <img *ngIf="activity.object.playlist_image" [src]="activity.object.playlist_image">
+                    <div (click)="openPlaySongsPage(activity.object.songs, i)" class="song-wrapper" *ngFor="let song of activity.object.songs; let i = index">
+                        <img width="30px" [src]="song.album_artwork">
+                        <div class="song-info-wrapper">
+                            <div class="song-title">{{song.title}}</div>
+                            <div class="artist-wrapper">
+                                <span class="song-artist" *ngFor="let artist of song.artists; let isLast=last">{{artist.name}}{{isLast ? '' : ', '}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>

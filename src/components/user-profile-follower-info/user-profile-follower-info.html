@@ -1,0 +1,23 @@
+<!--follower info-->
+<div class="flex-wrapper">
+    <div class="user-info-wrapper">
+        <div class="user-name">{{userProfile?.first_name}} {{userProfile?.last_name}}</div>
+        <div class="user-location">{{userProfile?.location}}</div>
+    </div>
+    <div class="following-info-wrapper">
+        <div class="following-count">
+            {{userProfile?.following}}
+        </div>
+        <div class="following-label">
+            Following
+        </div>
+    </div>
+    <div class="follower-info-wrapper">
+        <div class="follower-count">
+            {{userProfile?.followers}}
+        </div>
+        <div class="follower-label">
+            Followers
+        </div>
+    </div>
+</div>

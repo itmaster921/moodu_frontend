@@ -1,0 +1,10 @@
+<!--
+  Generated template for the ProfilePicture component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<div>
+    <img *ngIf="profilePictureUrl" class="profile-picture" alt="Profile Picture" src="{{apiUrl}}{{profilePictureUrl}}">
+    <img *ngIf="!profilePictureUrl" class="profile-picture" src="assets/img/empty_profile.png">
+</div>

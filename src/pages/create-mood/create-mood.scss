@@ -1,0 +1,47 @@
+page-create-mood {
+    .feeling-wrapper{
+        border-color: #979797;
+        border-width: 1px;
+        border-style: solid;
+        padding: 15px;
+        color: #979797;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 80%;
+    }
+
+    ion-content {
+        display: flex;
+        flex-direction: column;
+        align-content: center;   
+    }
+
+    .feeling-text {
+        margin:auto;
+    }
+
+    .emoticon-wrapper {
+        margin: auto;
+        width: 250px;
+        margin-top: 10px;
+    }
+    .search-icon {
+        font-size: 6rem;
+        margin: auto;
+    }
+    .search-text {
+        margin: auto;
+    }
+    .post-button-wrapper{
+        margin-top:15px;
+        display: flex;
+    }
+
+    .post-button {
+        margin: auto;
+
+    }
+}

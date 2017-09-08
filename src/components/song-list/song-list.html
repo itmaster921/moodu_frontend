@@ -1,0 +1,15 @@
+<!--
+  Generated template for the SongList component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-list no-lines>
+    <ion-list-header class="song-header" *ngIf="header != undefined && songs">
+        {{header}}
+    </ion-list-header>
+    <span *ngFor="let song of songs">
+    <song-list-item (click)="clickedOnSong(song, $event)" [song]="song" [selected]="isSelected(song)" [removable]="removable" (songRemove)="removeFired($event)"></song-list-item>
+  </span>
+</ion-list>

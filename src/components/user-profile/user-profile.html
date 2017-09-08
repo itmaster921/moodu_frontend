@@ -1,0 +1,16 @@
+<div class="user-profile">
+    <div *ngIf="userProfile?.profile_background_picture" class="background-image-wrapper">
+        <img class="user-profile-background-picture" src="{{apiUrl}}{{userProfile?.profile_background_picture}}">
+    </div>
+    <div class="columns">
+        <ion-avatar>
+            <uploadable-profile-picture [profileUrl]="userProfile?.profile_picture" [showEdit]="userProfile?.spotify_id == currentUser?.spotify_id"></uploadable-profile-picture>
+        </ion-avatar>
+        <follow-button [currentUser]="currentUser" [userProfile]="userProfile" *ngIf="userProfile?.spotify_id !== currentUser?.spotify_id"></follow-button>
+    </div>
+
+
+    <!--<theme-song [theme-song]="userProfile.theme_song"></theme-song>-->
+    <add-background-picture class="background-picture" [showEdit]="userProfile?.spotify_id == currentUser?.spotify_id"></add-background-picture>
+</div>
+<user-profile-follower-info [userProfile]="userProfile"></user-profile-follower-info>

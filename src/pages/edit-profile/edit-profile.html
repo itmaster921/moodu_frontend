@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <logo></logo>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="ui raised segment">
+        <h2>Edit Profile Info</h2>
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)" class="ui form">
+            <ion-list>
+
+                <ion-item>
+                    <ion-label floating>First Name</ion-label>
+                    <ion-input name="FirstName" type="text" [formControl]="authForm.controls['firstName']" clearInput></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Last Name</ion-label>
+                    <ion-input name="lastName" type="text" [formControl]="authForm.controls['lastName']" clearInput></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input name="email" type="email" [formControl]="authForm.controls['email']" clearInput></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Birthday</ion-label>
+                    <ion-datetime name="birthday" displayFormat="MM/DD/YYYY" [formControl]="authForm.controls['birthday']"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Location</ion-label>
+                    <ion-input name="location" type="text" [formControl]="authForm.controls['location']" clearInput></ion-input>
+                </ion-item>
+
+                <ion-list radio-group name="gender" [formControl]="authForm.controls['gender']">
+                    <ion-list-header>
+                        Gender
+                    </ion-list-header>
+
+                    <ion-item>
+                        <ion-label>Male</ion-label>
+                        <ion-radio name="gender" value="M"></ion-radio>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Female</ion-label>
+                        <ion-radio name="gender" value="F"></ion-radio>
+                    </ion-item>
+                </ion-list>
+
+            </ion-list>
+            <button ion-button="" type="submit" class="disable-hover button button-positive" block [disabled]="!authForm.valid"><span class="button-inner">Submit</span><div class="button-effect"></div></button>
+        </form>
+
+    </div>
+</ion-content>

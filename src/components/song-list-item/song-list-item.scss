@@ -1,0 +1,18 @@
+song-list-item {
+    .track-number {
+        color: #b5b6b8;
+        float: left;
+        margin-right: 25px;
+    }
+    .track-info {
+        float: left;
+    }
+    .track-image {
+        width: 40px;
+        height: 40px;
+    }
+    .icons {
+        position: absolute;
+        right: 5px;
+    }
+}

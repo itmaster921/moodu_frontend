@@ -1,0 +1,31 @@
+page-search {
+    ion-searchbar {
+        width:80%;
+    }
+    #search-icon{
+        font-size: 20rem;
+        color: #979797;
+    }
+    .flex-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ::-webkit-input-placeholder {
+        text-align: center;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        text-align: center;  
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        text-align: center;  
+    }
+
+    :-ms-input-placeholder {  
+        text-align: center; 
+    }
+}

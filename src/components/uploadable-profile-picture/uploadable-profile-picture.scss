@@ -1,0 +1,27 @@
+uploadable-profile-picture {
+    .profile-wrapper {
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+    .profile-picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .edit-picture-button,
+    .add-picture-button {
+        align-self: flex-end;
+    }
+    .background-image {
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+    }
+}

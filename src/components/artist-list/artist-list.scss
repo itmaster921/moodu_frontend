@@ -1,0 +1,19 @@
+artist-list {
+    .missing-image {
+        min-width: 8rem;
+        min-height: 8rem;
+        border-radius: 4rem;
+        background-color: #acacac;
+    }
+    .avatar-thumbnail {
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 4rem;
+    }
+    .artist-header {
+        color: #b5b6b8;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}

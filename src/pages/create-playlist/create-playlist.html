@@ -1,0 +1,103 @@
+<!--
+  Generated template for the CreatePlaylist page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <logo></logo>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="playlist" (ngSubmit)="savePlaylist()">
+        <input type="hidden" name="image" />
+        <input type="hidden" name="video" />
+        <ion-item>
+            <ion-input type="text" name="title" formControlName="title" autofocus placeholder="Playlist Title"></ion-input>
+        </ion-item>
+        <div class="form-wrapper">
+            <ion-item>
+                <ion-textarea placeholder="Message..." rows="5" name="message" formControlName="message"></ion-textarea>
+            </ion-item>
+            <div class="extras-buttons">
+                <div class="extra-button">
+                    <ion-icon (click)="presentPhotoActionSheet()" name="camera"></ion-icon>
+                </div>
+                <div class="extra-button">
+                    <ion-icon (click)="presentVideoActionSheet()" name="videocam"></ion-icon>
+                </div>
+                <div class="extra-button">
+                    <ion-icon name="pin"></ion-icon>
+                </div>
+
+            </div>
+            <div class="media-upload-preview">
+                <video *ngIf="this.playlist.controls['video'].value" width="250px" height="250px" controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer"><source [src]="this.playlist.controls['video'].value" type="video/mp4"/></video>
+                <img *ngIf="this.playlist.controls['image'].value" [src]="this.playlist.controls['image'].value">
+            </div>
+            <button class="add-button" type="button" ion-button icon-left color="light" round small (click)="openSongSearchModal()">
+                <ion-icon name="add"></ion-icon>music
+            </button>
+            <song-list [songs]="songs" [removable]="true"></song-list>
+        </div>
+        <div class="user-wrapper">
+            <button class="add-button" type="button" ion-button icon-left color="light" round small (click)="openUserProfileSearchModal()">
+                <ion-icon name="add"></ion-icon>@users
+                <!--<div class="users" formControlName="users"></div>-->
+            </button>
+            <user-list [profiles]="profiles" [removable]="true"></user-list>
+        </div>
+        <!--<input type="hidden" name="latitude" class="latitude" formControlName="latitude"></input>
+        <input type="hidden" name="longitude" class="longitude" formControlName="longitude"></input>-->
+        <ion-list>
+            <ion-item>
+                <ion-label>Public</ion-label>
+                <ion-toggle color="secondary" formControlName="public" checked="true"></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-label>Lock Edits</ion-label>
+                <ion-toggle color="secondary" formControlName="locked" checked="true"></ion-toggle>
+            </ion-item>
+        </ion-list>
+        <button ion-button type="submit" [disabled]="!playlist.valid || songs.length == 0" full>Post</button>
+    </form>
+</ion-content>
+
+
+<!--
+
+CreatePlaylistPage:
+- songs: any[];
++ openSongSearchModal(): song[]?
+
+
+SpotifySearchComponent:
+- searchInput
++ search(query): song[]
+
+---- Should we fire an onSearchComplete(): song[] event?
+---- Does this display the songs?
+---- Does this track which songs are selected?
+
+SongListComponent:
+- songs[]
++ toggleSelected(song)
++ getSelectedSongs() (THIS IS SHARED WITH CreatePlaylistPage)
++ remove(song)
++ clear()
++ addSongs(song[])???
+---- Listens for a onRemoveClick event.  When removed
+
+SongListItemComponent:
++ toggleSelected()
++ onRemoveClick() - Fires an event that remove was clicked
+
+-- SongListComponent is not ONLY inside CreatePlaylistPage.
+-- SongListComponent should not always have to be inside the SpotifySearchComponent-- It is used elsewhere.
+-- 
+
+
+  -->

@@ -1,0 +1,9 @@
+<button type="button" *ngIf="following == false" (click)="follow()" ion-button icon-left color="secondary">
+  <ion-icon name="add"></ion-icon>
+  Follow
+</button>
+
+<button type="button" *ngIf="following == true" (click)="unfollow()" ion-button icon-left color="secondary">
+  <ion-icon name="remove"></ion-icon>
+  Unfollow
+</button>

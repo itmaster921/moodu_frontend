@@ -1,0 +1,30 @@
+<!--
+  Generated template for the AlbumProfile page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{album.name}}</ion-title>
+        <ion-buttons end>
+            <button *ngIf="hasSongs()" (click)="notifyDone()" ion-button color="dark" clear>Done</button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="album-wrapper">
+        <div class="album-picture">
+            <img *ngIf="album.images.length > 0" src="{{album.images[1].url}}">
+        </div>
+        <div class="album-detail">
+            <div class="album-name">{{albumName}}</div>
+            <div class="artist-name">{{ album | artistNames}}</div>
+            <button ion-button color="dark" round icon-left>Add Album</button>
+        </div>
+    </div>
+    <song-list [header]="'Tracklist'" [songs]="songs" [selectedSongs]="selectedSongs" [selectable]="true"></song-list>
+</ion-content>

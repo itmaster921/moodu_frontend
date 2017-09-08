@@ -1,0 +1,18 @@
+page-album-profile {
+    .album-picture {
+        float: left;
+        width: 15rem;
+        height: 15rem;
+    }
+    .album-name {
+        font-size: 3rem;
+    }
+    .artist-name {
+        font-size: 2rem;
+        color: #b5b6b8;
+    }
+    .album-detail {
+        float: left;
+        margin-left: 15px;
+    }
+}

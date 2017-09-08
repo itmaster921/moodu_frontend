@@ -1,0 +1,39 @@
+page-create-prescription {
+    .search-icon {
+        font-size: 6rem;
+        margin: auto;
+    }
+    .search-text {
+        margin: auto;
+    }
+    .col-flex-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        space-between: 10px;
+    }
+    .flex-wrapper {
+        display: flex;
+    }
+    .camera-button, .video-button {
+        margin: auto;
+    }
+    .post-button-wrapper{
+        margin-top:15px;
+        display: flex;
+    }
+
+    .post-button {
+        margin: auto;
+
+    }
+    .description {
+        margin-top: 15px;
+    }
+    .col-flex-wrapper .item-inner{
+        border-bottom: 0;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: 0;
+    }
+}
